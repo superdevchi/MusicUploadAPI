@@ -6,6 +6,6 @@ FROM openjdk:17.0.1-jdk-slim
 
 #copy the jar file into docker image
 COPY --from=build /target/*.jar app.jar
-EXPOSE 9090
+
 #Run jar file
 ENTRYPOINT ["java","-jar","/app.jar"]
