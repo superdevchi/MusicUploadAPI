@@ -18,6 +18,11 @@ public class UserController {
         return "Start";
     }
 
+    @GetMapping("/list")
+    public List<UserModel> List(){
+        return service.ListUsers();
+    }
+
     @PostMapping("/create")
     public String users(@RequestBody UserModel userModel){
         service.CreateUser(userModel);
